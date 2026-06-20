@@ -8,7 +8,7 @@ export default function Header() {
     <HeaderDiv>
       <LogoDiv>
         <LogoImg
-          src="/moon-vector-illustration_943194-7342-removebg-preview.png"
+          src="/b053a42f6a3ab231e66ffc7cfe470076-removebg-preview.png"
           alt="logo"
         />
       </LogoDiv>
@@ -48,16 +48,17 @@ export default function Header() {
 const HeaderDiv = styled.header`
   width: 100%;
   height: 96px;
-  margin-top: 40px;
+  position: absolute;
+  top: 40px;
   padding-left: 55px;
   display: flex;
   align-items: center;
-  gap: 60px;
+  justify-content:space-between
 `;
 
 const LogoDiv = styled.div`
-  min-width: 48px !important;
-  height: 48px;
+  min-width: 60px !important;
+  height: 60px;
 `;
 
 const LogoImg = styled.img`
@@ -72,7 +73,7 @@ const LineNav = styled.div`
 `;
 
 const Line = styled.span`
-  width: 473px;
+  width: 433px;
   height: 1px;
   opacity: 0.25;
   background-color: #fff;
@@ -83,9 +84,10 @@ const Line = styled.span`
 
 const Nav = styled.nav`
   width: 830px;
-  padding: 39px 123px;
+
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 48px;
   backdrop-filter: blur(81.55px);
 `;
