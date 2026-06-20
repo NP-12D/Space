@@ -3,9 +3,11 @@ import Home from "./pages/Home"
 import Destination from "./pages/Destination"
 import Crew from "./pages/Crew"
 import Technology from "./pages/Technology"
+import Header from "./components/Header"
 function App() {
   return (
     <>
+    <Header/>
     <Routes>
       <Route path="/" element={<Home/>} />
       <Route path="/destination" element={<Destination/>}/>
