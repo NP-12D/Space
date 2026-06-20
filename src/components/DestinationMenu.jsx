@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-
 export default function DestinationMenu({ current }) {
   const planets = ["moon", "mars", "europa", "titan"];
 
@@ -23,6 +22,13 @@ const Nav = styled.nav`
   display: flex;
   gap: 36px;
   margin-top: 40px;
+   margin-bottom:20px;
+  @media (max-width: 1344px) {
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+   
+  }
 `;
 
 const PlanetLink = styled(Link)`

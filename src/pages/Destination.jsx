@@ -1,18 +1,27 @@
 import { useParams } from "react-router-dom";
 import styled from "styled-components";
 import DestinationMenu from "../components/DestinationMenu";
-
+import BigImg from "../components/BigImg";
+import { planetsdata } from "../components/planetsdata";
+import PlanetText from "../components/PlanetText";
 export default function Destination() {
   const { planetName } = useParams();
   console.log(planetName);
+  const planet = planetsdata.find((p) => p.id === planetName) || planetsdata[0];
 
   return (
     <Container>
       <Headline>
         <span>01</span> Pick your destination
       </Headline>
-      <Layout></Layout>
-      <DestinationMenu current={planetName} />
+
+      <Layout>
+        <BigImg planet={planet} />
+        <div>
+          <DestinationMenu current={planetName} />
+          <PlanetText planet={planet} />
+        </div>
+      </Layout>
     </Container>
   );
 }
@@ -20,11 +29,19 @@ export default function Destination() {
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  max-width: 1110px;
   width: 100%;
+  height: 100%;
+  min-height: 100vh;
   margin: 0 auto;
-  padding: 0 24px 80px 24px;
+  padding-top: 200px;
+  padding-bottom: 50px;
+  padding-inline: 160px;
   animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  /* position: absolute;
+  bottom: 112px; */
+  background-image: url("/destination.jpg");
+  background-position: center;
+  background-size: cover;
 `;
 
 const Headline = styled.h5`
@@ -48,4 +65,15 @@ const Layout = styled.div`
   align-items: center;
   justify-content: space-between;
   gap: 80px;
+  @media (max-width: 1344px) {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 50px;
+  }
+
+  @media (max-width: 640px) {
+    flex-direction: column;
+    gap: 32px;
+  }
 `;
