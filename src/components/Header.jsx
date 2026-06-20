@@ -33,7 +33,7 @@ export default function Header() {
               <Navh2>crew</Navh2>
             </Link>
           </NavItem>
-          <NavItem active={location.pathname === "/technology"}>
+          <NavItem $active={location.pathname === "/technology"}>
             <Link to="/technology">
               <Navh2>03</Navh2>
               <Navh2>TECHNOLOGY</Navh2>
