@@ -3,7 +3,7 @@ import Home from "./pages/Home";
 import Destination from "./pages/Destination";
 import Crew from "./pages/Crew";
 import Technology from "./pages/Technology";
-import Header from "./components/Header";
+import Header from "./layout/Header";
 function App() {
   return (
     <>

@@ -1,9 +1,9 @@
 import { useParams } from "react-router-dom";
 import styled from "styled-components";
-import DestinationMenu from "../components/DestinationMenu";
-import BigImg from "../components/BigImg";
+import DestinationMenu from "../components/destination/DestinationMenu";
+import BigImg from "../components/destination/BigImg";
 import { planetsdata } from "../components/planetsdata";
-import PlanetText from "../components/PlanetText";
+import PlanetText from "../components/destination/PlanetText";
 export default function Destination() {
   const { planetName } = useParams();
   console.log(planetName);
@@ -42,6 +42,7 @@ const Container = styled.div`
   background-image: url("/destination.jpg");
   background-position: center;
   background-size: cover;
+ 
 `;
 
 const Headline = styled.h5`
