@@ -13,7 +13,6 @@ const PlanetView = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
- 
 `;
 
 const PlanetImg = styled.img`
@@ -23,7 +22,7 @@ const PlanetImg = styled.img`
   object-fit: cover;
   box-shadow: 0 0 60px rgba(255, 255, 255, 0.1);
   animation: orbitSpin 160s linear infinite;
-  overflow:hidden;
+  overflow: hidden;
 
   @keyframes orbitSpin {
     from {
@@ -32,5 +31,9 @@ const PlanetImg = styled.img`
     to {
       transform: rotate(360deg);
     }
+  }
+  @media screen and (max-width: 600px) {
+    width: 350px;
+    height: 350px;
   }
 `;

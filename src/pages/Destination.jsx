@@ -42,7 +42,10 @@ const Container = styled.div`
   background-image: url("/destination.jpg");
   background-position: center;
   background-size: cover;
- 
+  @media screen and (max-width: 600px) {
+    padding-inline:32px;
+    overflow:hidden;
+  }
 `;
 
 const Headline = styled.h5`
@@ -54,10 +57,23 @@ const Headline = styled.h5`
   color: #fff;
   margin-bottom: 60px;
 
-  span {
+   span {
     font-weight: 700;
     color: rgba(255, 255, 255, 0.25);
     margin-right: 28px;
+    @media screen and (max-width: 1344px) {
+      font-size: 24px;
+    }
+    @media screen and (max-width: 600px) {
+      font-size: 18px;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    font-size: 18px;
+  }
+  @media screen and (max-width: 1344px) {
+    text-align: center;
+    font-size: 24px;
   }
 `;
 

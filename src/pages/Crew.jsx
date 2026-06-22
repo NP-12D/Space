@@ -33,7 +33,7 @@ const Main = styled.main`
   padding-top: 200px;
   padding-inline: 165px;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   background:
     linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("/crewbg.png");
   background-position: center;
@@ -42,6 +42,11 @@ const Main = styled.main`
   @media screen and (max-width: 1385px) {
     padding-top: 136px;
     padding-inline: 100px;
+    height: auto;
+  }
+  @media screen and (max-width: 1400px) and (orientation: landscape) {
+    min-height: 100vh;
+    padding-bottom: 40px;
   }
   @media screen and (max-width: 600px) {
     padding-inline: 32px;
@@ -68,6 +73,10 @@ const Headline = styled.h5`
     text-align: center;
     font-size: 16px;
   }
+  @media screen and (max-width: 1400px) and (orientation: landscape) {
+    font-size: 20px;
+    text-align: center;
+  }
 `;
 const TextPag = styled.div`
   display: flex;
@@ -79,12 +88,26 @@ const TextPag = styled.div`
     width: 458px;
     gap: 40px;
     align-items: center;
-    max-height: 232px;
+
     text-align: center;
     margin: auto;
   }
+  @media screen and (max-width: 1400px) and (orientation: landscape) {
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    margin:auto;
+  }
   @media screen and (max-width: 600px) {
-    width: 90%;
+    width: 100%;
+    height: auto;
+  }
+  @media screen and (max-width: 1400px) and (orientation: landscape) {
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    height: auto;
   }
 `;
 const Img = styled.img`
@@ -98,18 +121,35 @@ const Img = styled.img`
     transform: translateX(-50%);
     max-height: 532px;
   }
-  @media screen and (max-width: 780px) {
+
+  @media screen and (max-width: 780px) and (orientation: portrait) {
     width: 327px;
+  }
+  @media screen and (max-width: 1400px) and (orientation: landscape) {
+    display: none;
   }
 `;
 const ImgCon = styled.div`
   @media screen and (max-width: 780px) {
     display: none;
   }
+  @media screen and (max-width: 1400px) and (orientation: landscape) {
+    display: none;
+  }
 `;
 const MobailImg = styled.img`
   display: none;
-  @media screen and (max-width: 780px) {
+  @media screen and (max-width: 780px) and (orientation: portrait) {
+    display: flex;
+    width: 100%;
+    height: 223px;
+    object-fit: contain;
+    margin: auto;
+    margin-bottom: 32px;
+    border-bottom: 1.5px solid #383b4b;
+  }
+
+  @media screen and (max-width: 1400px) and (orientation: landscape) {
     display: flex;
     width: 327px;
     height: 223px;
@@ -123,10 +163,16 @@ const PagCont = styled.div`
   @media screen and (max-width: 780px) {
     display: none;
   }
+  @media screen and (max-width: 1400px) and (orientation: landscape) {
+    display: none;
+  }
 `;
 const PagCont1 = styled.div`
   display: none;
   @media screen and (max-width: 780px) {
+    display: flex;
+  }
+  @media screen and (max-width: 1400px) and (orientation: landscape) {
     display: flex;
   }
 `;

@@ -11,7 +11,10 @@ export default function Home() {
             <Subtitle>SO, YOU WANT TO TRAVEL TO</Subtitle>
             <MainTitle>SPACE</MainTitle>
             <Paragraph>
-              Let’s face it; if you want to go to space, you might as well genuinely go to outer space and not hover kind of on the edge of it. Well sit back, and relax because we’ll give you a truly out of this world experience!
+              Let’s face it; if you want to go to space, you might as well
+              genuinely go to outer space and not hover kind of on the edge of
+              it. Well sit back, and relax because we’ll give you a truly out of
+              this world experience!
             </Paragraph>
           </TextSection>
 
@@ -30,6 +33,11 @@ const Main = styled.main`
   background-image: url(${homebackground});
   background-position: center;
   background-size: cover;
+   @media screen and (max-width: 1000px) {
+    height:auto;
+    min-height:100vh;
+    padding-bottom:50px;
+  }
 `;
 
 const HeroContent = styled.div`
@@ -39,12 +47,10 @@ const HeroContent = styled.div`
   width: 100%;
   width: 100%;
   margin: 0 auto;
-  padding: 0px 165px;
+  padding-inline: 165px;
   z-index: 5;
   animation: fadeIn 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-  position:absolute;
-  bottom:131px;
-  left:0;
+  padding-top: 300px;
 
   @keyframes fadeIn {
     from {
@@ -56,6 +62,16 @@ const HeroContent = styled.div`
       transform: translateY(0);
     }
   }
+  @media screen and (max-width: 1344px) {
+    padding-inline: 100px;
+  }
+  @media screen and (max-width: 1000px) {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 200px;
+    justify-content: space-between;
+    gap:100px;
+  }
 `;
 
 const TextSection = styled.div`
@@ -63,6 +79,10 @@ const TextSection = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+   @media screen and (max-width: 1000px) {
+    align-items:center;
+    text-align:center;
+  }
 `;
 
 const Subtitle = styled.h5`
@@ -73,6 +93,12 @@ const Subtitle = styled.h5`
   text-transform: uppercase;
   font-weight: 400;
   margin-bottom: 24px;
+   @media screen and (max-width: 1000px) {
+    font-size:20px;
+  }
+  @media screen and (max-width: 600px) {
+    font-size:16px;
+  }
 `;
 
 const MainTitle = styled.h1`
@@ -83,6 +109,9 @@ const MainTitle = styled.h1`
   font-weight: 400;
   margin-bottom: 24px;
   text-transform: uppercase;
+  @media screen and (max-width: 600px) {
+    font-size:80px;
+  }
 `;
 
 const Paragraph = styled.p`
@@ -91,6 +120,9 @@ const Paragraph = styled.p`
   color: #d0d6f9;
   line-height: 1.8;
   font-weight: 400;
+  @media screen and (max-width: 1000px) {
+    font-size:16px;
+  }
 `;
 
 const ButtonSection = styled.div`
@@ -138,5 +170,14 @@ const ExploreButton = styled(Link)`
 
   &:active {
     transform: scale(0.98);
+  }
+  @media screen and (max-width: 1000px) {
+    width:242px;
+    height:242px;
+  }
+  @media screen and (max-width: 600px) {
+    width:150px;
+    height:150px;
+    font-size:20px;
   }
 `;

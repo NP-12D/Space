@@ -42,6 +42,9 @@ const Title = styled.h2`
   line-height: 100%;
   letter-spacing: 0px;
   color: #fff;
+   @media screen and (max-width: 600px) {
+    font-size:56px;
+  }
 `;
 
 const Description = styled.p`
@@ -50,6 +53,9 @@ const Description = styled.p`
   color: #d0d6f9;
   line-height: 1.8;
   margin-bottom: 54px;
+   @media screen and (max-width: 600px) {
+    font-size:15px;
+  }
 `;
 
 const Divider = styled.div`
@@ -67,6 +73,10 @@ const Stats = styled.div`
     align-items: center;
     text-align: center;
     justify-content: center;
+  }
+   @media screen and (max-width: 600px) {
+   flex-direction:column;
+   gap:32px;
   }
 `;
 
