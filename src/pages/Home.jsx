@@ -50,7 +50,9 @@ const HeroContent = styled.div`
   padding-inline: 165px;
   z-index: 5;
   animation: fadeIn 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-  padding-top: 300px;
+  position:absolute;
+  left:0px;
+  bottom:100px;
 
   @keyframes fadeIn {
     from {
@@ -71,6 +73,9 @@ const HeroContent = styled.div`
     padding-top: 200px;
     justify-content: space-between;
     gap:100px;
+    position: relative;
+    top:0px;
+    bottom:0px;
   }
 `;
 
