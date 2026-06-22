@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { crewdata } from "../components/crewdata";
+import { crewdata } from "../data/crewdata";
 import Pagination from "../components/crew/Pagination";
 import TextCont from "../components/crew/TextCont";
 import { useState } from "react";

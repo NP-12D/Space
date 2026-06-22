@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import styled from "styled-components";
 import DestinationMenu from "../components/destination/DestinationMenu";
 import BigImg from "../components/destination/BigImg";
-import { planetsdata } from "../components/planetsdata";
+import { planetsdata } from "../data/planetsdata";
 import PlanetText from "../components/destination/PlanetText";
 export default function Destination() {
   const { planetName } = useParams();
