@@ -33,10 +33,15 @@ const Main = styled.main`
   background-image: url(${homebackground});
   background-position: center;
   background-size: cover;
-   @media screen and (max-width: 1000px) {
+  padding-top:200px;
+   @media screen and (max-width: 1100px) {
     height:auto;
     min-height:100vh;
     padding-bottom:50px;
+    
+  }
+  @media screen and (max-width: 780px){
+    padding-top:136px;
   }
 `;
 
@@ -44,8 +49,8 @@ const HeroContent = styled.div`
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-  width: 100%;
-  width: 100%;
+  width: 90%;
+  
   margin: 0 auto;
   padding-inline: 165px;
   z-index: 5;
@@ -67,10 +72,13 @@ const HeroContent = styled.div`
   @media screen and (max-width: 1344px) {
     padding-inline: 100px;
   }
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 780px) {
+    padding-inline: 0;
+  }
+  @media screen and (max-width: 1100px) {
     flex-direction: column;
     align-items: center;
-    padding-top: 200px;
+   
     justify-content: space-between;
     gap:100px;
     position: relative;
@@ -84,7 +92,7 @@ const TextSection = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-   @media screen and (max-width: 1000px) {
+   @media screen and (max-width: 1100px) {
     align-items:center;
     text-align:center;
   }
@@ -98,8 +106,9 @@ const Subtitle = styled.h5`
   text-transform: uppercase;
   font-weight: 400;
   margin-bottom: 24px;
-   @media screen and (max-width: 1000px) {
-    font-size:20px;
+   @media screen and (max-width: 1100px) {
+    font-size:18px;
+   
   }
   @media screen and (max-width: 600px) {
     font-size:16px;
@@ -125,7 +134,7 @@ const Paragraph = styled.p`
   color: #d0d6f9;
   line-height: 1.8;
   font-weight: 400;
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 1100px) {
     font-size:16px;
   }
 `;
@@ -176,7 +185,7 @@ const ExploreButton = styled(Link)`
   &:active {
     transform: scale(0.98);
   }
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 1100px) {
     width:242px;
     height:242px;
   }

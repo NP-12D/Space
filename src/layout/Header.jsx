@@ -11,14 +11,16 @@ export default function Header() {
 
   return (
     <HeaderDiv>
-      <Link to="/">
+      
         <LogoDiv>
+          <Link to="/">
           <LogoImg
             src="/b053a42f6a3ab231e66ffc7cfe470076-removebg-preview.png"
             alt="logo"
           />
+           </Link>
         </LogoDiv>
-      </Link>
+     
       <LineNav>
         <Line />
 

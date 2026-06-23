@@ -42,14 +42,15 @@ const Container = styled.div`
   background-image: url("/destination.jpg");
   background-position: center;
   background-size: cover;
-  @media screen and (max-width: 600px) {
-    padding-inline:32px;
-    overflow:hidden;
-  }
+ 
   @media screen and (max-width: 1344px) {
     padding-inline:80px;
      overflow:hidden;
      padding-top: 135px;
+  }
+   @media screen and (max-width: 780px) {
+    padding-inline:32px;
+    overflow:hidden;
   }
 `;
 
@@ -70,11 +71,11 @@ const Headline = styled.h5`
       font-size: 24px;
       
     }
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 780px) {
       font-size: 18px;
     }
   }
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 780px) {
     font-size: 18px;
   }
   @media screen and (max-width: 1000px) {
