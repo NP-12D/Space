@@ -1,26 +1,23 @@
 import styled from "styled-components";
 import { useLocation, Link } from "react-router-dom";
-import { useState,useEffect } from "react";
+import { useState, useEffect } from "react";
 
 export default function Header() {
   const location = useLocation();
   const [burger, setBurger] = useState(false);
   useEffect(() => {
-  document.body.style.overflow = burger ? "hidden" : "auto";
-}, [burger]);
+    document.body.style.overflow = burger ? "hidden" : "auto";
+  }, [burger]);
 
   return (
     <HeaderDiv>
-      
-        <LogoDiv>
-          <Link to="/">
-          <LogoImg
-            src="/b053a42f6a3ab231e66ffc7cfe470076-removebg-preview.png"
-            alt="logo"
-          />
-           </Link>
-        </LogoDiv>
-     
+      <LogoDiv to="/">
+        <LogoImg
+          src="/simple-minimalist-galaxy-space-planet-logo-design-vector-removebg-preview.png"
+          alt="logo"
+        />
+      </LogoDiv>
+
       <LineNav>
         <Line />
 
@@ -88,16 +85,24 @@ const HeaderDiv = styled.header`
   padding-left: 55px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-between !important;
   z-index: 999;
   @media screen and (max-width: 1385px) {
     top: 0px;
   }
 `;
 
-const LogoDiv = styled.div`
-  min-width: 60px !important;
-  height: 60px;
+const LogoDiv = styled(Link)`
+  width: 100px !important;
+  height: 100px;
+  @media screen and (max-width: 1300px) {
+    width: 80px !important;
+    height: 80px;
+  }
+  @media screen and (max-width: 780px) {
+    width: 60px !important;
+    height: 60px;
+  }
 `;
 
 const LogoImg = styled.img`

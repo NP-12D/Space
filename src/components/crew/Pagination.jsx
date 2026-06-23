@@ -17,6 +17,10 @@ const PaginationCont = styled.div`
   align-items: center;
   position: relative;
   z-index:9999;
+  @media screen  and (max-width:780){
+    position: static;
+  z-index:9999;
+  }
 `;
 const PaginationButton = styled.button`
   width: 15px;
