@@ -27,6 +27,10 @@ const Container = styled.div`
     align-items: center;
     text-align:center;
   }
+   @media screen and (max-width: 780px) {
+     position: static;
+  z-index:0;
+  }
 `;
 const Title = styled.h2`
   font-family: Bellefair;

@@ -21,12 +21,13 @@ export default function Technology() {
           </TextWrapper>
         </Div>
         <ImgPortrait
+          key={current}
           src={technologydata[current].images.portrait}
           alt="technology portrait"
         />
       </Container>
 
-      <Container2>
+      <Container2 key={current}>
         <ImgLandscape
           src={technologydata[current].images.landscape}
           alt="technology landscape"
@@ -56,12 +57,13 @@ const Main = styled.main`
   padding-top: 200px;
   padding-left: 165px;
   padding-bottom: 50px;
+
   @media screen and (max-width: 1440px) {
     padding-left: 50px;
     padding-top: 136px;
   }
   @media screen and (max-width: 1000px) {
-    padding-left: 0px;
+    padding-left: 0;
     padding-top: 100px;
   }
 `;
@@ -72,7 +74,7 @@ const Container = styled.div`
   justify-content: space-between;
 
   @media screen and (max-width: 1000px) {
-    display: none;
+    display: none !important;
   }
 `;
 
@@ -85,6 +87,7 @@ const Container2 = styled.div`
   @media screen and (max-width: 1000px) {
     display: flex;
     text-align: center;
+    display: flex;
   }
 `;
 
@@ -111,12 +114,11 @@ const Headline = styled.h5`
 
   @media screen and (max-width: 1000px) {
     font-size: 18px;
-  }
-  @media screen and (max-width: 1200px) {
-    font-size: 24px;
-  }
-  @media screen and (max-width: 1000px) {
     margin-left: 38px;
+  }
+  @media screen and (max-width: 1344px) {
+    font-size: 24px;
+    margin-bottom: 20px;
   }
 `;
 
@@ -141,12 +143,13 @@ const ImgLandscape = styled.img`
   object-fit: cover;
   animation: ${fadeIn} 0.6s ease;
 
-  @media screen and (min-width: 1345px) {
-    display: none;
-  }
+  display: none;
 
   @media screen and (max-width: 850px) {
     height: 310px;
+  }
+  @media screen and (max-width: 1000px) {
+    display: flex;
   }
 `;
 

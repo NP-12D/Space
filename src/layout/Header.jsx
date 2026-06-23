@@ -1,10 +1,14 @@
 import styled from "styled-components";
 import { useLocation, Link } from "react-router-dom";
-import { useState } from "react";
+import { useState,useEffect } from "react";
 
 export default function Header() {
   const location = useLocation();
   const [burger, setBurger] = useState(false);
+  useEffect(() => {
+  document.body.style.overflow = burger ? "hidden" : "auto";
+}, [burger]);
+
   return (
     <HeaderDiv>
       <Link to="/">

@@ -49,6 +49,7 @@ const Container = styled.div`
   @media screen and (max-width: 1344px) {
     padding-inline:80px;
      overflow:hidden;
+     padding-top: 135px;
   }
 `;
 
@@ -67,6 +68,7 @@ const Headline = styled.h5`
     margin-right: 28px;
     @media screen and (max-width: 1344px) {
       font-size: 24px;
+      
     }
     @media screen and (max-width: 600px) {
       font-size: 18px;
@@ -81,6 +83,7 @@ const Headline = styled.h5`
   }
   @media screen and (max-width: 1344px) {
     font-size: 24px;
+    
   }
 `;
 
