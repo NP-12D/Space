@@ -7,14 +7,17 @@ export default function Header() {
   const [burger, setBurger] = useState(false);
   return (
     <HeaderDiv>
-      <LogoDiv>
-        <LogoImg
-          src="/b053a42f6a3ab231e66ffc7cfe470076-removebg-preview.png"
-          alt="logo"
-        />
-      </LogoDiv>
+      <Link to="/">
+        <LogoDiv>
+          <LogoImg
+            src="/b053a42f6a3ab231e66ffc7cfe470076-removebg-preview.png"
+            alt="logo"
+          />
+        </LogoDiv>
+      </Link>
       <LineNav>
         <Line />
+
         <Nav className={burger ? "open" : ""}>
           <NavItem
             active={location.pathname === "/"}
@@ -129,6 +132,7 @@ const Nav = styled.nav`
   @media screen and (max-width: 1385px) {
     width: auto;
     padding-inline: 48px;
+    gap: 32px;
   }
   @media screen and (max-width: 780px) {
     display: none;
@@ -224,6 +228,9 @@ const Navh2 = styled.h2`
   line-height: 100%;
   letter-spacing: 2.7px;
   color: #fff;
+  @media screen and (max-width: 1385px) {
+    letter-spacing: 2.3px;
+  }
 `;
 const BurgerTrigger = styled.button`
   display: none;

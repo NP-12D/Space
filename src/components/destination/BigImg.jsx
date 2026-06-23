@@ -32,6 +32,15 @@ const PlanetImg = styled.img`
       transform: rotate(360deg);
     }
   }
+  
+  @media screen and (max-width: 1154px) {
+    width: 380px;
+    height: 380px;
+  }
+  @media screen and (max-width: 1100px) {
+    width: 350px;
+    height: 350px;
+  }
   @media screen and (max-width: 600px) {
     width: 350px;
     height: 350px;

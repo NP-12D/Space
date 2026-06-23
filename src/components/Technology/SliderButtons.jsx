@@ -20,7 +20,7 @@ const Btns = styled.div`
   display: flex;
   flex-direction: column;
   gap: 32px;
-  @media screen and (max-width: 1344px) {
+  @media screen and (max-width: 1000px) {
     flex-direction: row;
   }
 `;
@@ -45,7 +45,7 @@ const Btn = styled.button`
     color: #0b0d17;
     background-color: #fff;
   }
-  @media screen and (max-width: 1344px) {
+  @media screen and (max-width: 1000px) {
     width: 60px;
     height: 60px;
     font-size: 24px;

@@ -14,19 +14,11 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   gap: 15px;
-  position: relative;
-  z-index:9999;
-  @media screen and (max-width: 1344px) {
-    align-items: center;
+  @media screen and (max-width: 1440px) {
+    align-items: left;
   }
-  @media screen and (max-width: 1300px) and (orientation: landscape) {
-  align-items:flex-start;
-  text-align:left;
-  }
-   @media screen and (max-width: 910px) and (orientation: landscape) {
-    align-items: center;
-    text-align:center;
-  }
+  
+  
 `;
 const Title = styled.h2`
   font-family: Bellefair;
@@ -36,10 +28,10 @@ const Title = styled.h2`
   letter-spacing: 0px;
   text-transform: uppercase;
   color: #d0d6f9;
-  @media screen and (max-width: 1344px) {
+  @media screen and (max-width: 1440px) {
     font-size: 24px;
   }
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 1000px) {
     font-size: 16px;
   }
 `;
@@ -50,10 +42,10 @@ const Name = styled.h1`
   line-height: 100%;
   letter-spacing: 0px;
   color: #ffffff;
-  @media screen and (max-width: 1344px) {
+  @media screen and (max-width: 1440px) {
     font-size: 40px;
   }
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 1000px) {
     font-size: 24px;
   }
 `;
@@ -65,11 +57,11 @@ const Bio = styled.p`
   line-height: 32px;
   letter-spacing: 0px;
   color: #d0d6f9;
-  @media screen and (max-width: 1344px) {
+  @media screen and (max-width: 1440px) {
     font-size: 16px;
     line-height: 28px;
   }
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 1000px) {
     font-size: 15px;
   }
 `;

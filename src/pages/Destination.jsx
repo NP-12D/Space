@@ -46,6 +46,10 @@ const Container = styled.div`
     padding-inline:32px;
     overflow:hidden;
   }
+  @media screen and (max-width: 1344px) {
+    padding-inline:80px;
+     overflow:hidden;
+  }
 `;
 
 const Headline = styled.h5`
@@ -71,8 +75,11 @@ const Headline = styled.h5`
   @media screen and (max-width: 600px) {
     font-size: 18px;
   }
-  @media screen and (max-width: 1344px) {
+  @media screen and (max-width: 1000px) {
     text-align: center;
+    font-size: 24px;
+  }
+  @media screen and (max-width: 1344px) {
     font-size: 24px;
   }
 `;
@@ -83,6 +90,10 @@ const Layout = styled.div`
   justify-content: space-between;
   gap: 80px;
   @media (max-width: 1344px) {
+    
+    gap: 50px;
+  }
+  @media (max-width: 1000px) {
     flex-direction: column;
     align-items: center;
     text-align: center;

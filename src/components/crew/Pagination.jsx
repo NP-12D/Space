@@ -1,35 +1,33 @@
 import styled from "styled-components";
-export default function Pagination({onClick}) {
-    
+export default function Pagination({ onClick ,current }) {
   return (
     <>
       <PaginationCont>
-        <PaginationButton onClick={()=>onClick(0)}/>
-        <PaginationButton onClick={()=>onClick(1)}/>
-        <PaginationButton onClick={()=>onClick(2)}/>
-        <PaginationButton onClick={()=>onClick(3)}/>
-
-        
+        {[0, 1, 2, 3].map((num) => (
+          <PaginationButton onClick={() => onClick(num)}  className={current===num? "active":""}/>
+        ))}
       </PaginationCont>
     </>
   );
 }
 
 const PaginationCont = styled.div`
-display:flex;
-gap:24px;
-align-items:center;
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  position: relative;
+  z-index:9999;
 `;
-const PaginationButton=styled.button`
-width:15px;
-height:15px;
-background-color:#fff;
-opacity:0.17;
-border-radius:50%;
-&:hover{
-  opacity:0.5;
-}
-&.active{
-  opacity:1;
-}
+const PaginationButton = styled.button`
+  width: 15px;
+  height: 15px;
+  background-color: #fff;
+  opacity: 0.17;
+  border-radius: 50%;
+  &:hover {
+    opacity: 0.5;
+  }
+  &.active {
+    opacity: 1;
+  }
 `;
